@@ -1,2 +1,31 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="container-fluid">
+  <% if user_signed_in? %>
+    <h1>Aqui vamos a poner el resto!</h1>
+    <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <div class="row">
+      <div class="col home">
+        <h5 class="welcome">Welcome!</h5>
+        <div class="image">
+          <%= image_tag 'emblem.png', class: 'pic' %>
+        </div>
+        <div class="card-body">
+          <div class="quote">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem pariatur hic 
+              repellat aspernatur, vel officia, consectetur quos et ut nulla fugiat soluta 
+              optio assumenda itaque, aperiam voluptatibus numquam earum voluptatum!
+            </p>
+            <span>.:Random quote:.</span>
+          <hr>
+          </div>
+          <div class="controls">
+            <%= link_to "Sign up", new_user_registration_path, class: 'btn' %>
+            <%= link_to "Log in", new_user_session_path, class: 'btn' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <% end %>
+</div>
