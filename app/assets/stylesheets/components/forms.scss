@@ -1,0 +1,28 @@
+.sign-up {
+    font-family: $fira;
+    text-align: center;
+}
+
+.sign-in {
+    font-family: $fira;
+    text-align: center;
+}
+
+.col-form-label {
+    font-family: $fira;
+    text-align: center;
+}
+
+.remember {
+    display: flex;
+    justify-content: center;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 320px) and (max-width: 550px){
+        flex-direction: column;
+    }
+}
